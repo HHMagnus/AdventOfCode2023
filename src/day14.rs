@@ -33,13 +33,6 @@ pub fn day14() {
 
 	let part2: usize = matrix.iter().map(|x| x.iter().filter(|x| x == &&'O').count()).enumerate().map(|x| (matrix.len()-x.0) * x.1).sum();
 	println!("Day 14 part 2: {}", part2);
-
-	for x in 0..matrix.len() {
-		for y in 0..matrix[0].len() {
-			print!("{}", matrix[x][y]);
-		}
-		println!("");
-	}
 }
 
 fn north(matrix: &mut Vec<Vec<char>>) {

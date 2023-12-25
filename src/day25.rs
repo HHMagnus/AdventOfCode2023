@@ -81,4 +81,6 @@ pub fn day25() {
 	}
 
 	println!("Day 25 part 1: {}", size * (nodes.len() - size));
+
+	println!("Day 25 part 2: Press the button!");
 }

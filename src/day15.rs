@@ -5,7 +5,7 @@ pub fn day15() {
 
 	let strs: Vec<&str> = file.split(",").collect();
 
-	println!("{}", hash("HASH"));
+	//println!("{}", hash("HASH"));
 
 	let part1: u32 = strs.clone().into_iter().map(hash).sum();
 	println!("Day 15 part 1: {}", part1);

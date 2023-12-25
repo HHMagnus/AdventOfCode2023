@@ -56,7 +56,6 @@ pub fn day11() {
 		}
 	}
 
-	println!("{:?}", galaxies);
 	let all_galaxy_pairs: Vec<Vec<(usize, usize)>> = galaxies.into_iter().combinations_with_replacement(2).filter(|x| x[0] != x[1]).collect_vec();
 
 	let part1: i32 = all_galaxy_pairs.iter().map(|x| ((x[0].0 as i32) - (x[1].0 as i32)).abs() + ((x[0].1 as i32) - (x[1].1 as i32)).abs()).sum();
@@ -82,7 +81,6 @@ pub fn day11() {
 		((x - x_expanses) + x_expanses * space_between, (y - y_expanses) + y_expanses * space_between)
 	}).collect();
 
-	println!("{:?}", galaxies);
 	let all_galaxy_pairs: Vec<Vec<(i128, i128)>> = galaxies.into_iter().combinations_with_replacement(2).filter(|x| x[0] != x[1]).collect_vec();
 
 	let part2: i128 = all_galaxy_pairs.iter().map(|x| ((x[0].0 as i128) - (x[1].0 as i128)).abs() + ((x[0].1 as i128) - (x[1].1 as i128)).abs()).sum();

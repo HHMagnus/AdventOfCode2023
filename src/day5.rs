@@ -101,4 +101,4 @@ pub fn day5() {
 	}
 
 	println!("Day 1 part 2: {:?}", seeds.iter().map(|x| x.0).min().unwrap());
-} // too high 124747783
+}

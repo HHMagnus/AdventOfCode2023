@@ -48,12 +48,12 @@ fn solve_part1(pos: (i32, i32), matrix: &Vec<Vec<char>>) -> u32 {
 	}
 
 	// This was used to view the square that is produced
-	for x in 0..x_max {
+	/*for x in 0..x_max {
 		for y in 0..y_max {
 			print!("{}", if positions.contains(&(x, y)) { 'O' } else { matrix[x as usize][y as usize] });
 		}
 		println!("");
-	}
+	}*/
 
 	return positions.len() as u32;
 }
@@ -108,7 +108,7 @@ fn solve_part2(steps: u64, pos: (i32, i32), matrix: &Vec<Vec<char>>) -> u64 {
 			let curr = positions.len() as u32;
 			let d = curr as i32 - last as i32;
 			let dd = d-diff;
-			println!("{}, {}, {}, {}", i, curr, d, dd);
+			//println!("{}, {}, {}, {}", i, curr, d, dd);
 			last = curr;
 			diff = d;
 			if ddiff == dd {
@@ -129,7 +129,7 @@ fn solve_part2(steps: u64, pos: (i32, i32), matrix: &Vec<Vec<char>>) -> u64 {
 		curr += diff;
 		i += mapsized;
 	}
-	println!("{}, {}, {}, {}", i, curr, diff, ddiff);
+	//println!("{}, {}, {}, {}", i, curr, diff, ddiff);
 
 	return curr;
 }

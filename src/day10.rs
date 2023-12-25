@@ -203,7 +203,7 @@ pub fn day10() {
 		empties.push_back((x, y));
 	}
 
-	for x in 0..matrix.len() {
+	/*for x in 0..matrix.len() {
 		for y in 0..matrix[0].len() {
 			let mut c = matrix[x][y];
 			if left.contains(&(x as i32, y as i32)) {
@@ -215,7 +215,7 @@ pub fn day10() {
 			print!("{}", if c == 'O' || c == 'I' { c.to_string().bold() } else { c.to_string().normal() });
 		}
 		println!("");
-	}
+	}*/
 
 	let part2 = if right_outside { left.len() } else { right.len() };
 
